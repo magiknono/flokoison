@@ -9,7 +9,7 @@
 ## Docs
 [mix](https://hexdocs.pm/mix/Mix.html)
 [floki](https://hexdocs.pm/floki/Floki.html)
-[poison](https://hexdocs.pm/poison/Poison.html)
+[HTTPoison](https://hexdocs.pm/httpoison/HTTPoison.html)
 
 ## Installation
 
