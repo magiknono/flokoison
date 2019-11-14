@@ -15,11 +15,21 @@ FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
 [start with mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
 [github HTTPoison](https://github.com/edgurgel/httpoison)
 [github Floki](https://github.com/philss/floki)
+[elixir with](https://elixirschool.com/en/lessons/basics/control-structures/#with)
 
 ## Docs
 [mix](https://hexdocs.pm/mix/Mix.html)
 [floki](https://hexdocs.pm/floki/Floki.html)
 [HTTPoison](https://hexdocs.pm/httpoison/HTTPoison.html)
+[elixir with](https://hexdocs.pm/elixir/Kernel.SpecialForms.html#with/1)
+
+## Guides and Parentheses...
+[elixir syntax reference](https://hexdocs.pm/elixir/syntax-reference.html)
+[elixir style guide](https://github.com/christopheradams/elixir_style_guide)
+
+# todos :
+floki
+with & understand parentheses 
 
 ## Installation
 

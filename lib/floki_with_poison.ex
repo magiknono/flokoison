@@ -45,4 +45,16 @@ defmodule FlokiWithPoison do
         IO.inspect reason
     end
   end
+
+  # error with parenthese
+  # def getwith_website_body_http(url) do
+  #   with
+  #     {:ok, %HTTPoison.Response{status_code: @http_ok, body: body}} <- IO.puts body,
+  #     {:ok, %HTTPoison.Response{status_code: @http_not_found}} <- IO.puts "Not found :(",
+  #     {:error, %HTTPoison.Error{reason: reason}} <- IO.inspect reason
+  #   do
+  #     HTTPoison.get("http://" <> url)
+  #   end
+  # end
+
 end
