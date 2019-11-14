@@ -14,6 +14,7 @@ FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
 ## Resources
 [start with mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
 [github HTTPoison](https://github.com/edgurgel/httpoison)
+[github Floki](https://github.com/philss/floki)
 
 ## Docs
 [mix](https://hexdocs.pm/mix/Mix.html)

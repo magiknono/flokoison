@@ -21,7 +21,8 @@ defmodule FlokiWithPoison.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 1.6"}
+      {:httpoison, "~> 1.6"},
+      {:floki, "~> 0.23.0"}
     ]
   end
 end
