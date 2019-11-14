@@ -16,8 +16,12 @@ defmodule FlokiWithPoison do
     :world
   end
 
-  def get_website_body(url) do
-    case HTTPoison.get(url) do
+  def get_website_body, do: "You need to suffix this method with _http or _https with a url in parameter"
+  def get_website_body(url), do: "You need to suffix this method with _http or _https, ex: FlokiWithPoison.get_website_body_https('" <> url <> "')"
+
+
+  def get_website_body_http(url) do
+    case HTTPoison.get("http://" <> url) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         IO.puts body
       {:ok, %HTTPoison.Response{status_code: 404}} ->
@@ -25,6 +29,16 @@ defmodule FlokiWithPoison do
       {:error, %HTTPoison.Error{reason: reason}} ->
         IO.inspect reason
     end
+  end
 
+  def get_website_body_https(url) do
+    case HTTPoison.get("https://" <> url) do
+      {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+        IO.puts body
+      {:ok, %HTTPoison.Response{status_code: 404}} ->
+        IO.puts "Not found :("
+      {:error, %HTTPoison.Error{reason: reason}} ->
+        IO.inspect reason
+    end
   end
 end
