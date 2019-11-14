@@ -22,7 +22,9 @@ defmodule FlokiWithPoison.MixProject do
   defp deps do
     [
       {:httpoison, "~> 1.6"},
-      {:floki, "~> 0.23.0"}
+      {:floki, "~> 0.23.0"},
+      {:earmark, "~> 1.4", [only: :dev]},
+      {:ex_doc, "~> 0.21.2", [only: :dev]}
     ]
   end
 end
