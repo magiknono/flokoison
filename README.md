@@ -2,6 +2,15 @@
 
 **TODO: Add description**
 
+
+## Resources
+[start with mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
+
+## Docs
+[mix](https://hexdocs.pm/mix/Mix.html)
+[floki](https://hexdocs.pm/floki/Floki.html)
+[poison](https://hexdocs.pm/poison/Poison.html)
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
