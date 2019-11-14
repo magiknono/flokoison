@@ -5,6 +5,9 @@
 # Get body response of an http|https request with the given url in parameter
 FlokiWithPoison.get_website_body(url)
 
+# basic test FlokiWithPoison
+mix test
+
 # examples with http or https
 ```elixir
 FlokiWithPoison.get_website_body_http("thebestmotherfucking.website")
@@ -27,10 +30,11 @@ FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
 [elixir syntax reference](https://hexdocs.pm/elixir/syntax-reference.html)
 [elixir style guide](https://github.com/christopheradams/elixir_style_guide)
 
-# todos :
+# todos & learn:
 floki
 with & understand parentheses 
 
+--- auto generated readme ---
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
