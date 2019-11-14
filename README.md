@@ -2,9 +2,15 @@
 
 **TODO: Add description**
 
+# Usage
+FlokiWithPoison.get_website_body(url)
+
+# example
+FlokiWithPoison.get_website_body("https://thebestmotherfucking.website/")
 
 ## Resources
 [start with mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
+[github HTTPoison](https://github.com/edgurgel/httpoison)
 
 ## Docs
 [mix](https://hexdocs.pm/mix/Mix.html)
