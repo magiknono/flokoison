@@ -2,11 +2,14 @@
 
 **TODO: Add description**
 
-# Usage
+# Get body response of an http|https request with the given url in parameter
 FlokiWithPoison.get_website_body(url)
 
-# example
-FlokiWithPoison.get_website_body("https://thebestmotherfucking.website/")
+# examples with http or https
+```elixir
+FlokiWithPoison.get_website_body_http("thebestmotherfucking.website")
+FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
+```
 
 ## Resources
 [start with mix](https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)
