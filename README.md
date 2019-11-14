@@ -1,14 +1,14 @@
 # FlokiWithPoison
 
-**TODO: elixir exo**
+**Telixir exo**
 
-# Get body response of an http|https request with the given url in parameter
-FlokiWithPoison.get_website_body(url)
+Get body response of an http|https request with the given url in parameter
 
-# basic test FlokiWithPoison
+# basic test 
 mix test
 
-# examples with http or https
+## examples with http or https
+
 ```elixir
 FlokiWithPoison.get_website_body_http("thebestmotherfucking.website")
 FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
@@ -34,11 +34,18 @@ FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
 [elixir style guide](https://github.com/christopheradams/elixir_style_guide)
 [create doc](https://elixirschool.com/en/lessons/basics/documentation/)
 
-# todos & learn:
+# todo & learn:
 floki
 with & understand parentheses 
 
 --- auto generated readme ---
+
+# TIL
+[first pull request on elixir school fr](https://github.com/elixirschool/elixirschool/pull/2129/commits/5aa8bfd510375b2cff4e73ba7466beef08e4cfde)
+[first pull request on elixir school en](https://github.com/elixirschool/elixirschool/pull/2128/commits/d2a1023b2953f44c4bc3404e17f3c7b65fa15d99)
+
+
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
