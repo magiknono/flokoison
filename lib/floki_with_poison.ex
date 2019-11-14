@@ -16,8 +16,10 @@ defmodule FlokiWithPoison do
     :world
   end
 
-  def get_website_body, do: "You need to suffix this method with _http or _https with a url in parameter"
-  def get_website_body(url), do: "You need to suffix this method with _http or _https, ex: FlokiWithPoison.get_website_body_https('" <> url <> "')"
+  @help_website_body "You need to suffix this method with _http or _https"
+
+  def get_website_body, do: ~s(#{@help_website_body} with a url in parameter)
+  def get_website_body(url), do: "#{@help_website_body}, ex: FlokiWithPoison.get_website_body_https('" <> url <> "')"
 
 
   def get_website_body_http(url) do
