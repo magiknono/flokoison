@@ -14,8 +14,6 @@ defmodule FlokiWithPoison do
   @doc """
   `get_website_body_http/1` return http body of a given url
 
-    ## Examples
-
         iex> FlokiWithPoison.get_website_body_http("info.cern.ch/hypertext/WWW/TheProject.html")
         <HEADER>
         <TITLE>The World Wide Web project</TITLE>
@@ -39,8 +37,6 @@ defmodule FlokiWithPoison do
   @doc """
   `get_website_body_https/1` return https body of a given url
 
-    ## Examples
-
         iex>FlokiWithPoison.get_website_body_https("elixir-lang.org")
   """
   def get_website_body_https(url) do
@@ -57,9 +53,7 @@ defmodule FlokiWithPoison do
   @doc """
   `get_elixir_current_version` return elixir last released version from elixir-lang website
 
-    ## Examples
-
-        iex>FlokiWithPoison.get_elixir_current_version
+        iex> FlokiWithPoison.get_elixir_current_version
   """
 
   def get_elixir_current_version do
