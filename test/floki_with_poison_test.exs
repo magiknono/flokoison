@@ -1,10 +1,5 @@
 defmodule FlokiWithPoisonTest do
   use ExUnit.Case
-  doctest FlokiWithPoison
-
-  test "greets the world" do
-    assert FlokiWithPoison.hello() == :world
-  end
 
   test "FlokiWithPoison.get_website_body()" do
     assert FlokiWithPoison.get_website_body() == "You need to suffix this method with _http or _https with a url in parameter"
@@ -20,6 +15,10 @@ defmodule FlokiWithPoisonTest do
 
   test "get_website_body_https(url)" do
     assert FlokiWithPoison.get_website_body_https("elixir-lang.org") == :ok
+  end
+
+  test "get_elixir_current_version" do
+    assert FlokiWithPoison.get_elixir_current_version() == {:ok, "Elixir v1.9 released"}
   end
 
 end
