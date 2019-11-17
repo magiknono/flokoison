@@ -59,4 +59,26 @@ defmodule FlokiWithPoison do
     end
   end
 
+  @doc """
+  `scrape_me/2` return text scraped of a given url with given css selectors of a html node
+
+        iex> FlokiWithPoison.scrape_me("https://elixir-lang.org/","div.news > h3 > a")
+        {:ok, "Elixir v1.9 released"}
+  """
+  def scrape_me(url, css_selectors) do
+    case HTTPoison.get(url) do
+      {:ok, %HTTPoison.Response{status_code: @http_ok, body: body}} ->
+        url =
+          body
+          |> Floki.find("#{css_selectors}")
+          |> Floki.text
+
+      {:ok, url}
+      {:ok, %HTTPoison.Response{status_code: @http_not_found}} ->
+        IO.puts "Not found :("
+      {:error, %HTTPoison.Error{reason: reason}} ->
+        IO.inspect reason
+    end
+  end
+
 end
