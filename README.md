@@ -2,11 +2,9 @@
 
 **elixir exo**
 
-Get body response of an http|https request with the given url in parameter
-Scrap text of a given url with given css selectors of a html node
+- Get body response of an http|https request with the given url in parameter
+- Scrap text of a given url with given css selectors of a html node
 
-# basic test 
-mix test
 
 ## examples with http or https
 
@@ -36,10 +34,14 @@ FlokiWithPoison.scrape_me("https://elixir-lang.org/","div.news > h3 > a")
 - [elixir style guide](https://github.com/christopheradams/elixir_style_guide)
 - [create doc](https://elixirschool.com/en/lessons/basics/documentation/)
 
+# basic test 
+mix test
+
+# beautiful docs
+mix docs
+
 # todo & learn:
 - with & understand parentheses 
-
---- auto generated readme ---
 
 ## Installation
 
