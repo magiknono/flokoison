@@ -13,4 +13,8 @@ defmodule FlokiWithPoisonTest do
     assert FlokiWithPoison.get_elixir_current_version() == {:ok, "Elixir v1.9 released"}
   end
 
+  test "FlokiWithPoison.scrape_me(url,css_selectors)" do
+    assert FlokiWithPoison.scrape_me("https://elixir-lang.org/","div.news > h3 > a") == {:ok, "Elixir v1.9 released"}
+  end
+
 end
