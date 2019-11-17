@@ -10,7 +10,7 @@
 
 ```elixir
 FlokiWithPoison.get_website_body("https://elixir-lang.org/")
-FlokiWithPoison.scrape_me("https://elixir-lang.org/","div.news > h3 > a")
+FlokiWithPoison.scrape_me("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
 
 ```
 # generated doc
