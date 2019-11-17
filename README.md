@@ -35,16 +35,9 @@ FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
 - [create doc](https://elixirschool.com/en/lessons/basics/documentation/)
 
 # todo & learn:
-- floki
 - with & understand parentheses 
 
 --- auto generated readme ---
-
-# TIL
-- [first pull request on elixir school fr](https://github.com/elixirschool/elixirschool/pull/2129/commits/5aa8bfd510375b2cff4e73ba7466beef08e4cfde)
-- [first pull request on elixir school en](https://github.com/elixirschool/elixirschool/pull/2128/commits/d2a1023b2953f44c4bc3404e17f3c7b65fa15d99)
-
-
 
 ## Installation
 
