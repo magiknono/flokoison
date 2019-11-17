@@ -1,11 +1,11 @@
-defmodule FlokiWithPoison do
+defmodule Flokoison do
   @help_website_body "You need to add"
   @http_ok 200
   @http_not_found 404
   @elixir_url "https://elixir-lang.org"
 
   @moduledoc """
-  Documentation for FlokiWithPoison.
+  Documentation for Flokoison.
   """
   @doc """
   `get_website_body/0` alert you that an url must be given in parameter
@@ -16,7 +16,7 @@ defmodule FlokiWithPoison do
   @doc """
   `get_website_body/1` return http(s) body of a given url
 
-        iex> FlokiWithPoison.get_website_body("http://info.cern.ch/hypertext/WWW/TheProject.html")
+        iex> Flokoison.get_website_body("http://info.cern.ch/hypertext/WWW/TheProject.html")
         <HEADER>
         <TITLE>The World Wide Web project</TITLE>
         <NEXTID N="55">
@@ -39,7 +39,7 @@ defmodule FlokiWithPoison do
   @doc """
   `get_elixir_current_version` return elixir last released version from elixir-lang website
 
-        iex> FlokiWithPoison.get_elixir_current_version
+        iex> Flokoison.get_elixir_current_version
         {:ok, "Elixir v1.9 released"}
   """
 
@@ -62,7 +62,7 @@ defmodule FlokiWithPoison do
   @doc """
   `scrape_text/2` return text scraped of a given url with given css selectors of a html node
 
-        iex> FlokiWithPoison.scrape_text("https://elixir-lang.org/","div.news > h3 > a")
+        iex> Flokoison.scrape_text("https://elixir-lang.org/","div.news > h3 > a")
         {:ok, "Elixir v1.9 released"}
   """
   def scrape_text(url, css_selectors) do
@@ -84,7 +84,7 @@ defmodule FlokiWithPoison do
   @doc """
   `scrape_link/2` return link scraped of a given url with given css selectors of a html node
 
-        iex> FlokiWithPoison.scrape_link("https://elixir-lang.org/","div.news > h3 > a")
+        iex> Flokoison.scrape_link("https://elixir-lang.org/","div.news > h3 > a")
         {:ok, "Elixir v1.9 released"}
   """
   def scrape_link(url, css_selectors) do

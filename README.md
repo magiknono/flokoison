@@ -1,4 +1,4 @@
-# FlokiWithPoison
+# Flokoison
 
 **elixir exo**
 
@@ -10,9 +10,9 @@
 ## examples with http or https
 
 ```elixir
-FlokiWithPoison.get_website_body("https://elixir-lang.org/")
-FlokiWithPoison.scrape_text("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
-FlokiWithPoison.scrape_link("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
+Flokoison.get_website_body("https://elixir-lang.org/")
+Flokoison.scrape_text("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
+Flokoison.scrape_link("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
 ```
 # generated doc
 
