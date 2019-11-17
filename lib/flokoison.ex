@@ -35,28 +35,6 @@ defmodule Flokoison do
     end
   end
 
-  @doc """
-  `get_elixir_current_version` return elixir last released version from elixir-lang website
-
-        iex> Flokoison.get_elixir_current_version
-        {:ok, "Elixir v1.9 released"}
-  """
-
-  def get_elixir_current_version do
-    case HTTPoison.get(@elixir_url) do
-      {:ok, %HTTPoison.Response{status_code: @http_ok, body: body}} ->
-        url =
-          body
-          |> Floki.find("div.news > h3 > a")
-          |> Floki.text
-
-      {:ok, url}
-      {:ok, %HTTPoison.Response{status_code: @http_not_found}} ->
-        IO.puts "Not found :("
-      {:error, %HTTPoison.Error{reason: reason}} ->
-        IO.inspect reason
-    end
-  end
 
   @doc """
   `scrape_text/2` return text scraped of a given url with given css selectors of a html node

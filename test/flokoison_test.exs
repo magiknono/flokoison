@@ -2,15 +2,11 @@ defmodule FlokoisonTest do
   use ExUnit.Case
 
   test "Flokoison.get_website_body()" do
-    assert Flokoison.get_website_body() == "You need to add a url in parameter"
+    assert Flokoison.get_website_body() == "You must give an url in parameter"
   end
 
   test "Flokoison.get_website_body(url)" do
     assert Flokoison.get_website_body("http://info.cern.ch/hypertext/WWW/TheProject.html") == :ok
-  end
-
-  test "Flokoison.get_elixir_current_version" do
-    assert Flokoison.get_elixir_current_version() == {:ok, "Elixir v1.9 released"}
   end
 
   test "Flokoison.scrape_text(url,css_selectors)" do
