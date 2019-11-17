@@ -1,5 +1,5 @@
 defmodule FlokiWithPoison do
-  @help_website_body "You need to suffix this method with _http or _https"
+  @help_website_body "You need to add"
   @http_ok 200
   @http_not_found 404
   @elixir_url "https://elixir-lang.org"
@@ -7,14 +7,16 @@ defmodule FlokiWithPoison do
   @moduledoc """
   Documentation for FlokiWithPoison.
   """
+  @doc """
+  `get_website_body/0` alert you that an url must be given in parameter
+  """
+  def get_website_body, do: ~s(#{@help_website_body} a url in parameter)
 
-  def get_website_body, do: ~s(#{@help_website_body} with a url in parameter)
-  def get_website_body(url), do: "#{@help_website_body}, ex: FlokiWithPoison.get_website_body_https('" <> url <> "')"
 
   @doc """
-  `get_website_body_http/1` return http body of a given url
+  `get_website_body/1` return http(s) body of a given url
 
-        iex> FlokiWithPoison.get_website_body_http("info.cern.ch/hypertext/WWW/TheProject.html")
+        iex> FlokiWithPoison.get_website_body("http://info.cern.ch/hypertext/WWW/TheProject.html")
         <HEADER>
         <TITLE>The World Wide Web project</TITLE>
         <NEXTID N="55">
@@ -23,24 +25,8 @@ defmodule FlokiWithPoison do
         <H1>World Wide Web</H1>The WorldWideWeb (W3) is a wide-area<A
   """
 
-  def get_website_body_http(url) do
-    case HTTPoison.get("http://" <> url) do
-      {:ok, %HTTPoison.Response{status_code: @http_ok, body: body}} ->
-        IO.puts body
-      {:ok, %HTTPoison.Response{status_code: @http_not_found}} ->
-        IO.puts "Not found :("
-      {:error, %HTTPoison.Error{reason: reason}} ->
-        IO.inspect reason
-    end
-  end
-
-  @doc """
-  `get_website_body_https/1` return https body of a given url
-
-        iex>FlokiWithPoison.get_website_body_https("elixir-lang.org")
-  """
-  def get_website_body_https(url) do
-    case HTTPoison.get("https://" <> url) do
+  def get_website_body(url) do
+    case HTTPoison.get(url) do
       {:ok, %HTTPoison.Response{status_code: @http_ok, body: body}} ->
         IO.puts body
       {:ok, %HTTPoison.Response{status_code: @http_not_found}} ->
@@ -54,6 +40,7 @@ defmodule FlokiWithPoison do
   `get_elixir_current_version` return elixir last released version from elixir-lang website
 
         iex> FlokiWithPoison.get_elixir_current_version
+        {:ok, "Elixir v1.9 released"}
   """
 
   def get_elixir_current_version do
