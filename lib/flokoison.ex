@@ -1,5 +1,4 @@
 defmodule Flokoison do
-  @help_website_body "You need to add"
   @http_ok 200
   @http_not_found 404
   @elixir_url "https://elixir-lang.org"
@@ -10,7 +9,7 @@ defmodule Flokoison do
   @doc """
   `get_website_body/0` alert you that an url must be given in parameter
   """
-  def get_website_body, do: ~s(#{@help_website_body} a url in parameter)
+  def get_website_body, do: ~s(You must give an url in parameter)
 
 
   @doc """
