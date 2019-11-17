@@ -4,14 +4,15 @@
 
 - Get body response of an http|https request with the given url in parameter
 - Scrap text of a given url with given css selectors of a html node
+- Scrap link of a given url with given css selectors of a html node
 
 
 ## examples with http or https
 
 ```elixir
 FlokiWithPoison.get_website_body("https://elixir-lang.org/")
-FlokiWithPoison.scrape_me("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
-
+FlokiWithPoison.scrape_text("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
+FlokiWithPoison.scrape_link("https://elixir-lang.org/","#sidebar-primary > div.widget.news > h3 > a")
 ```
 # generated doc
 
