@@ -1,8 +1,9 @@
 # FlokiWithPoison
 
-**Telixir exo**
+**elixir exo**
 
 Get body response of an http|https request with the given url in parameter
+Scrap text of a given url with given css selectors of a html node
 
 # basic test 
 mix test
@@ -10,8 +11,9 @@ mix test
 ## examples with http or https
 
 ```elixir
-FlokiWithPoison.get_website_body_http("thebestmotherfucking.website")
-FlokiWithPoison.get_website_body_https("thebestmotherfucking.website")
+FlokiWithPoison.get_website_body("https://elixir-lang.org/")
+FlokiWithPoison.scrape_me("https://elixir-lang.org/","div.news > h3 > a")
+
 ```
 # generated doc
 
